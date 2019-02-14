@@ -1,0 +1,23 @@
+package com.cg.demoprac.bean;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+
+
+public class Lab3_3 {
+	public static void main(String arg[]) {
+		
+		LocalDate p = LocalDate.of(1998, Month.AUGUST, 28) ;
+		LocalDate n = LocalDate.now();
+		
+		Period period = p.until(n);
+		
+		System.out.println("Days:"+ period.getDays());
+		System.out.println("Months:"+period.getMonths());
+		System.out.println("Years:"+ period.getYears());
+		
+		
+	}
+	
+
+}

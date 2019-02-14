@@ -1,0 +1,132 @@
+package com.cg.demoprac.bean;
+
+public class inheri {
+	long accNum;
+	double balance;
+	String accHolder;
+	
+	
+	
+	public long getAccNum() {
+		return accNum;
+	}
+
+	public void setAccNum(long accNum) {
+		this.accNum = accNum;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	public String getAccHolder() {
+		return accHolder;
+	}
+
+	public void setAccHolder(String accHolder) {
+		this.accHolder = accHolder;
+	}
+
+	public inheri() {
+		
+	}
+	
+	public inheri (long accNum , double balance , String accHolder) {
+		this.balance = balance;
+		this.accNum = accNum;
+		this.accHolder = accHolder;
+		
+		
+	}
+	public void withdraw(int dec)
+	{
+		balance -= dec;
+		System.out.println("after withdarw balance is"+balance);
+	}
+	
+	public void deposit(int inc)
+	{
+		
+		balance += inc;
+		System.out.println("after deposi balance is:"+balance);
+	}
+	
+	
+	}
+	----------------------------------------------
+  
+  package com.cg.demoprac.bean;
+
+public class Person extends inheri {
+	
+
+	private String name;
+	private float age;
+	
+	
+	
+	public String getName() {
+		//super.deposit(2000);
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public float getAge() {
+		return age;
+	}
+	public void setAge(float age) {
+		this.age = age;
+	}
+
+
+public static void main(String args[]) {
+	
+	Person p = new Person();
+	Person p1 = new Person();
+	p.setAge(20);
+	p.setName("smith");
+	p.setBalance(2000);
+	
+	p1.setAge(22);
+	p1.setName("katky");
+	p1.setBalance(3000);
+	
+
+	System.out.println("ur details:"+p.getName());
+	System.out.println("ur age is:"+p.getAge());
+	System.out.println("ur balance:"+p.getBalance());
+	
+	System.out.println("--------------------------------------------");
+	
+	System.out.println("ur details:"+p1.getName());
+	System.out.println("ur age is:"+p1.getAge());
+	System.out.println("ur balance:"+p1.getBalance());
+	
+	System.out.println("--------------------------------------------");
+    p.deposit(2000);
+    p1.withdraw(2000);
+    
+	System.out.println("--------------------------------------------");
+
+    System.out.println(p.getBalance());
+    //p1.getBalance();               
+    
+
+
+}
+}
+
+	
+	
+
+ 
+
+
+
+	
+	

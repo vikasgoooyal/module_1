@@ -1,0 +1,44 @@
+package com.cg.demoprac.bean;
+
+import java.util.Scanner;
+
+class AgeException extends Exception {
+		 
+		AgeException(String s)
+		{
+			 System.out.println("you are eligible");
+	}
+}
+
+	 class Age2 {
+		
+		public void detail() throws AgeException{
+			System.out.println("enter your age");
+			Scanner sc = new Scanner(System.in);
+			int a1 = sc.nextInt();
+			if(a1>15)
+				throw new AgeException("x");
+			else
+				System.out.println("you are eligible");
+		}
+
+	}
+	 class Emp{
+			public static void main(String arg[]) {
+				try
+				{
+					Age2 e1 = new Age2();
+					e1.detail();
+				}
+				catch(AgeException e) {
+				System.out.println(e);
+			}
+			}
+	}
+				
+
+	
+	
+	
+
+	

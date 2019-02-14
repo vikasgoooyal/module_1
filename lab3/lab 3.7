@@ -1,0 +1,40 @@
+package com.cg.demoprac.bean;
+
+import java.util.Scanner;
+
+public class lab3_8 {
+	
+	public static void main(String arg [])
+	{
+		String s; int f=0;
+		 Scanner sc = new Scanner(System.in);
+		 s = sc.nextLine();
+		 int a = s.length();		
+		 char[] c = s.toCharArray();
+		 
+		 if(a <12)
+			 System.out.println("False");
+		 
+		 	
+			 if(c[a-4] == '_')
+			 {
+				 if(c[a-3] == 'j')
+				 {
+					 if(c[a-2]== 'o')
+					 {
+						 if(c[a-1] == 'b')
+							 f=1;
+							
+					 }
+				 }
+			 }
+			
+		 
+		 if(f==1)
+			 System.out.println("True");
+		 else
+			 System.out.println("False");
+	}
+	
+
+}

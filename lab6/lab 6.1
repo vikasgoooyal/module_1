@@ -1,0 +1,58 @@
+package com.cg.demoprac.bean;
+
+import java.util.Scanner;
+
+public class Check {
+
+	public static void main(String[] args) {
+		
+		try {
+			BlaDe e =new BlaDe();
+			e.details();
+		}catch(Exception f) {
+			System.out.println(f.getMessage());
+		}
+
+	}
+}
+
+-------------------------------------------
+package com.cg.demoprac.bean;
+
+import java.util.Scanner;
+
+public class BlaDe {
+	
+	String first;
+	String second;
+	
+	public void details() throws NameException{
+		
+		System.out.println("Enter first name");
+		Scanner sc = new Scanner (System.in);
+		first = sc.nextLine();
+		System.out.println("Enter second name");
+		second = sc.nextLine();
+		
+		if(first.equals("") || second.equals(""))
+		{
+			throw new NameException("vikas");
+		}
+		else
+		
+			System.out.println("name in correct form");
+	}
+}
+
+-------------------------------------------------
+
+package com.cg.demoprac.bean;
+
+class NameException extends Exception{
+	NameException(String s)
+	{
+		super(s);
+		
+		//System.out.println();
+	}
+}

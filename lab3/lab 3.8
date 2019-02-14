@@ -1,0 +1,41 @@
+package com.cg.demoprac.bean;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class lab3_9 {
+	public static void main(String arg []) {
+		String sq;
+		Scanner sc  = new Scanner(System.in);
+		sq=sc.nextLine();
+		int a= sq.length();
+		
+		char [] c = sq.toCharArray();
+		
+		Arrays.sort(c);
+			
+		int r = a/2;
+		
+		for(int i=0 ; i<r ; i++)
+		{	 
+			
+			c[i] = Character.toUpperCase(c[i]);
+		}
+		
+		for(int i=r ; i<a ; i++ )
+		{
+			c[i] = Character.toLowerCase(c[i]);
+		}
+		
+		for(int i=0 ; i<a ; i++)
+		{
+			System.out.print(c[i]);
+		}
+		
+	}
+	
+	
+	
+
+}

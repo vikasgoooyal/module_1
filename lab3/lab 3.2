@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class LabThree {
+	public static void main(String arg[]) {
+	
+	String a;
+	int f=0;
+	 Scanner sc = new Scanner(System.in);
+	 a = sc.nextLine();
+	 
+	 int d=a.length();
+	 char [] c = a.toCharArray();
+	 
+	 int [] arrInt = new int[d];
+	 
+	 for(int i=0 ; i<d ; i++)
+	 {
+		int ascii = c[i];
+		arrInt[i] =ascii;
+	 }
+	 
+	 for(int i=0 ; i<d ;i++)
+	 {
+		 for(int j=i+1 ; j<d ;j++)
+		 {
+			 if(arrInt[i]>arrInt[j])
+			f=1;
+			 break;
+		 }
+	 }
+	 if(f==1)
+	 System.out.println("nonpositive");
+	 else
+		 System.out.println("positive");
+
+	 
+	
+	}
+}

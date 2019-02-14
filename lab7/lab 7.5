@@ -1,0 +1,25 @@
+package com.cg.demoprac.bean;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class ArrayString {
+	
+	public static void main(String args []) {
+		
+		ArrayList<String> m = new ArrayList<String>(5);
+		
+		for(int i=0 ; i<5 ;i++) {
+			Scanner sc = new Scanner(System.in);
+			String n = sc.nextLine();
+			m.add(n);
+		}
+		
+		Collections.sort(m);
+		
+		System.out.println(m);
+	
+	}
+
+}

@@ -1,0 +1,24 @@
+package com.cg.demoprac.bean;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+import java.time.LocalDateTime;
+
+public class Lab3_3 {
+	public static void main(String arg[]) {
+		
+		System.out.println("enter month and year");
+		Scanner sc = new Scanner(System.in);
+        int mon = sc.nextInt(); 
+        int year = sc.nextInt();
+        
+		
+		LocalDate v = LocalDate.of(2018,Month.FEBRUARY,01);
+			
+		LocalDate v1 = v.plusMonths(mon).plusYears(year);
+		
+		System.out.println(v1);
+	}
+}
